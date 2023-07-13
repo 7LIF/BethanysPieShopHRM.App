@@ -6,8 +6,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-
-
+using BethanysPieShopHRM.App.Components;
 
 namespace BethanysPieShopHRM.App.Pages
 {
@@ -20,9 +19,26 @@ namespace BethanysPieShopHRM.App.Pages
         public IEmployeeDataService EmployeeDataService { get; set; }
 
 
+        protected AddEmployeeDialog AddEmployeeDialog { get; set; }
+
+
         protected async override Task OnInitializedAsync()
         {
             Employees = (await EmployeeDataService.GetAllEmployees()).ToList();
         }
+
+
+        protected void QuickAddEmployee()
+        {
+            AddEmployeeDialog.Show();
+        }
+
+
+        public async void AddEmployeeDialog_OnDialogClose()
+        {
+            Employees = (await EmployeeDataService.GetAllEmployees()).ToList();
+            StateHasChanged();
+        }
+
     }
 }

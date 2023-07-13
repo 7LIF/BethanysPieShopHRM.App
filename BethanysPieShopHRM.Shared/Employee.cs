@@ -28,14 +28,13 @@ namespace BethanysPieShopHRM.Shared
 		[EmailAddress]
 		public string Email { get; set; }
 
-		[Required]
+
 		public string Street { get; set; }
 
-		[Required]
+
 		public string Zip { get; set; }
 
 
-		[Required]
 		public string City { get; set; }
 
 
