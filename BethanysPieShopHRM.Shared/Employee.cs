@@ -56,7 +56,6 @@ namespace BethanysPieShopHRM.Shared
 		public Gender Gender { get; set; }
 
 
-		//[Required(AllowEmptyStrings = true)]                //not required
 		[StringLength(1000, ErrorMessage = "Comment length can't exceed 1000 characters.")]
 		public string Comment { get; set; }
 
