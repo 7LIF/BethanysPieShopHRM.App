@@ -2,12 +2,11 @@
 using BethanysPieShopHRM.Shared;
 using Microsoft.AspNetCore.Components;
 using System;
-using System;
 using System.Diagnostics.Metrics;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using System.Linq;
 
 namespace BethanysPieShopHRM.App.Pages
 {
